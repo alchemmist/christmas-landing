@@ -1,0 +1,291 @@
+@keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      *, *:before, *:after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        color: #FFFFFF;
+        background: #0C2335;
+        font-family: "YS Text Wide", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+      }
+      @media (min-width: 768px) {
+        body {
+          font-size: 1rem;
+        }
+      }
+      .container {
+        padding: 0 12px;
+        width: 100%;
+        max-width: 1064px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .section-welcome {
+        display: flex;
+        flex-direction: column;
+        background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/tree.png") no-repeat 30% bottom/auto 460px, url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/welcome-bg.jpg") no-repeat center/cover;
+        min-height: 768px;
+        line-height: 120%;
+      }
+      .section-welcome .container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media (min-width: 768px) {
+        .section-welcome {
+          background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/tree.png") no-repeat 75% bottom/897px auto, url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/welcome-bg.jpg") no-repeat center/cover;
+          border-bottom-left-radius: 180px;
+          border-bottom-right-radius: 180px;
+        }
+        .section-welcome .container {
+          justify-content: center;
+        }
+      }
+      .menu {
+        margin: 0;
+        padding: 3em;
+        list-style: none;
+        text-align: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 200%;
+      }
+      .menu li {
+        margin: 0 1em;
+        display: inline-block;
+      }
+      .menu a {
+        color: inherit;
+        padding-bottom: 0.2em;
+        text-decoration: none;
+      }
+      .menu a:hover {
+        border-bottom: 1px solid currentColor;
+      }
+      h1.page-title {
+        margin: 0;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 120%;
+        text-transform: uppercase;
+        max-width: 9em;
+      }
+      @media (min-width: 768px) {
+        h1.page-title {
+          font-size: 74px;
+        }
+      }
+      .page-tagline {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        max-width: 14em;
+      }
+      @media (min-width: 768px) {
+        .page-tagline {
+          font-size: 32px;
+        }
+      }
+      h2 {
+        margin: 2em 0 0.85em;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      @media (min-width: 768px) {
+        h2 {
+          font-size: 44px;
+        }
+      }
+      .section-features h3 {
+        margin: 0 0 1em;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      @media (min-width: 768px) {
+        .section-features h3 {
+          font-size: 20px;
+        }
+      }
+      .features-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+        grid-auto-flow: dense;
+        gap: 1.5em;
+      }
+      .feature {
+        position: relative;
+        margin: 0;
+        padding: 50px 36px;
+        border-radius: 70px;
+      }
+      .feature:nth-child(odd) {
+        background: radial-gradient(100% 100% at 50% 100%, rgba(40, 161, 255, 0.8) 0%, rgba(12, 35, 53, 0.8) 100%);
+        box-shadow: inset 0 0 2px rgba(113, 192, 255, 0.5), 0 60px 90px -50px rgba(40, 161, 255, 0.8);
+      }
+      .feature:nth-child(even) {
+        background: radial-gradient(100% 100% at 50% 100%, rgba(255, 75, 108, 0.8) 0%, rgba(12, 35, 53, 0.8) 100%);
+        box-shadow: inset 0 0 2px rgba(255, 135, 157, 0.5), 0 60px 90px -50px rgba(255, 75, 108, 0.8);
+      }
+      .feature:nth-child(odd):after {
+        content: "";
+        position: absolute;
+        bottom: 26px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/snowflake.svg") no-repeat center/cover;
+        animation: spin 10s linear infinite;
+      }
+      .to-do-heading {
+        max-width: 13em;
+      }
+      .block-to-do {
+        position: relative;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+      }
+      @media (min-width: 768px) {
+        .block-to-do {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .block-to-do:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/snowflake-2.svg") no-repeat center/cover;
+          animation: spin 10s linear infinite;
+        }
+      }
+      @media (min-width: 768px) {
+        .block-to-do:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+        .block-to-do:nth-child(even):after {
+          left: unset;
+          right: 0;
+          background-image: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/snowflake-3.svg");
+        }
+      }
+      .block-to-do-text {
+        font-size: 14px;
+        line-height: 160%;
+      }
+      .block-to-do-text h3 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      @media (min-width: 768px) {
+        .block-to-do-text {
+          width: 45%;
+          font-size: 18px;
+        }
+        .block-to-do-text h3 {
+          font-size: 34px;
+        }
+      }
+      .block-to-do-figure {
+        max-width: 560px;
+      }
+      @media (min-width: 768px) {
+        .block-to-do-figure {
+          width: 45%;
+        }
+      }
+      .block-to-do-figure-movie {
+        padding: 6em 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/todo-bg-1.svg") no-repeat center/contain;
+      }
+      .block-to-do-figure-movie a {
+        display: block;
+        max-width: 75%;
+        overflow: hidden;
+        border-radius: 40px;
+      }
+      .block-to-do-figure-movie img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      .block-to-do-figure-music {
+        padding: 20% 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/todo-bg-2.svg") no-repeat center/contain;
+      }
+      .block-to-do-figure-music iframe {
+        border: none;
+        width: 100%;
+        border-radius: 30px;
+      }
+      ul.wishes {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-transform: uppercase;
+      }
+      .wishes li {
+        padding: 2em 3em;
+        margin-bottom: -2px;
+        border: 2px solid #575E90;
+        border-radius: 50px;
+      }
+      .section-map h2 {
+        margin-bottom: 0;
+      }
+      .maps {
+        position: relative;
+        margin: 5% 0 7%;
+        width: 100%;
+        height: 467px;
+        overflow: hidden;
+        box-shadow: 0 14px 40px rgba(134, 145, 155, 0.35);
+        border-radius: 40px;
+      }
+      .maps iframe {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .page-bottom-bg {
+        margin: 30px auto 0;
+        width: 746px;
+        max-width: 100%;
+        height: 154px;
+        background: url("https://e7n.s3.yandex.net/static/inf/html-course/new-year-2023/img/dark/page-bottom.svg") no-repeat left bottom;
+      }
